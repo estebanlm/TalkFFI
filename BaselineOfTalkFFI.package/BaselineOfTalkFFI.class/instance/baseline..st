@@ -6,7 +6,7 @@ baseline: spec
 		spec blessing: #'baseline'.
 		spec 
 			baseline: 'LibClang' with: [
-				spec repository: 'github://estebanlm/LibClang' ].
+				spec repository: 'github://estebanlm/libclang-pharo-bindings' ].
 		spec 
 			package: 'TalkFFI-Runtime';
 			package: 'TalkFFI-Announcements';
