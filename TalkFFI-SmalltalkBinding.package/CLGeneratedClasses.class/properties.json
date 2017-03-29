@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "TalkFFI-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"structClasses",
+		"enumClasses",
+		"callbackClasses",
+		"unionClasses",
+		"headerClasses",
+		"arrayClasses",
+		"opaqueClasses"
+	],
+	"name" : "CLGeneratedClasses",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CLNodeVisitor",
+	"category" : "TalkFFI-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mayGC",
+		"mappingModel"
+	],
+	"name" : "CLAbstractCodeGenerator",
+	"type" : "normal"
+}

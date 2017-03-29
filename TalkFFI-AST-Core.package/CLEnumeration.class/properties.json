@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CLType",
+	"category" : "TalkFFI-AST-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"items",
+		"type"
+	],
+	"name" : "CLEnumeration",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+This is the entry point of the TalkFFI mapping to nativeboost. See class-side examples for usage scenarios

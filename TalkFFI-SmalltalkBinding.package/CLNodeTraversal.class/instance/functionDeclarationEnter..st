@@ -1,0 +1,2 @@
+actions
+functionDeclarationEnter: aNode

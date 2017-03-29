@@ -1,0 +1,3 @@
+accessing
+rbModel
+	^self subclassResponsibility 

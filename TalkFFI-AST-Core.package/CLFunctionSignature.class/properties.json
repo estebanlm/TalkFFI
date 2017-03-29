@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "CLType",
+	"category" : "TalkFFI-AST-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"returnType",
+		"arguments",
+		"function"
+	],
+	"name" : "CLFunctionSignature",
+	"type" : "normal"
+}

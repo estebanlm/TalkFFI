@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CLNode",
+	"category" : "TalkFFI-AST-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"type"
+	],
+	"name" : "CLArgument",
+	"type" : "normal"
+}

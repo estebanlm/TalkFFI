@@ -1,0 +1,3 @@
+accessing
+platformIdGetter
+	^self subclassResponsibility 

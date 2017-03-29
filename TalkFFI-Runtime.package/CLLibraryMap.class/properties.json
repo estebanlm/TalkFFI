@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "TalkFFI-Runtime",
+	"classinstvars" : [
+		"typeMap"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CLLibraryMap",
+	"type" : "normal"
+}

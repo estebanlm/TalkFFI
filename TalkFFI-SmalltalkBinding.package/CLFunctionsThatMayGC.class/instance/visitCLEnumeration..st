@@ -1,0 +1,3 @@
+visiting
+visitCLEnumeration: aNode
+	^false

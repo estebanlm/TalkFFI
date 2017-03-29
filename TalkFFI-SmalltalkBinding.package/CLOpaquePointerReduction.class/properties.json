@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CLNodeTraversal",
+	"category" : "TalkFFI-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"opaques"
+	],
+	"name" : "CLOpaquePointerReduction",
+	"type" : "normal"
+}

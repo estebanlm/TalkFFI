@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CLNodeVisitor",
+	"category" : "TalkFFI-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CLFunctionsThatMayGC",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "CLForeignLibInterfaceGenerator",
+	"category" : "TalkFFI-NativeBoostBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"codeGenerationVisitor"
+	],
+	"name" : "CLForeign2NBGenerator",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+visiting
+visitCLOpaquePtr: aNode
+	^ false

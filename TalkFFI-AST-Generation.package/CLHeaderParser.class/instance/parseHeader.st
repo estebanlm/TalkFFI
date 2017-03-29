@@ -1,0 +1,3 @@
+api
+parseHeader
+	^ self convertHeader

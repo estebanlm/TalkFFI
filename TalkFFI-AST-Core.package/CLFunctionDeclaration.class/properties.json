@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CLNode",
+	"category" : "TalkFFI-AST-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"signature",
+		"callingConvention"
+	],
+	"name" : "CLFunctionDeclaration",
+	"type" : "normal"
+}

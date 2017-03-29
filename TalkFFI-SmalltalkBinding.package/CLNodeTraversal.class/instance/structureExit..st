@@ -1,0 +1,2 @@
+actions
+structureExit: aNode

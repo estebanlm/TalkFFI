@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CLStructure",
+	"category" : "TalkFFI-AST-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CLUnion",
+	"type" : "normal"
+}

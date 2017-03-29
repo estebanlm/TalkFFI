@@ -1,0 +1,3 @@
+testing
+isCLFunctionSignature
+	^true

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "CLAbstractCodeGenerator",
+	"category" : "TalkFFI-NativeBoostBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Primaries2NBTypes"
+	],
+	"instvars" : [
+		"headerClass",
+		"opaque",
+		"idx"
+	],
+	"name" : "CLNativeBoostMapping",
+	"type" : "normal"
+}

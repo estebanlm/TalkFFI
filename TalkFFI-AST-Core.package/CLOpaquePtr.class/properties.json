@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CLOpaque",
+	"category" : "TalkFFI-AST-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CLOpaquePtr",
+	"type" : "normal"
+}

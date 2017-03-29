@@ -1,0 +1,3 @@
+accessing
+classPrefix
+	^ mappingModel classPrefix 

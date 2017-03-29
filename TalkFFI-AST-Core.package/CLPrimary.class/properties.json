@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "CiprianTeodorov 12/9/2012 09:06",
+	"super" : "CLType",
+	"category" : "TalkFFI-AST-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Instances"
+	],
+	"instvars" : [ ],
+	"name" : "CLPrimary",
+	"type" : "normal"
+}

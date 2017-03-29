@@ -1,0 +1,3 @@
+visiting
+visitCLUnion: aNode
+	^false

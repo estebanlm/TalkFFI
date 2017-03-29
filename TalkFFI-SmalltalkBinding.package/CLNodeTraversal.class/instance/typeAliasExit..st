@@ -1,0 +1,2 @@
+actions
+typeAliasExit: aNode

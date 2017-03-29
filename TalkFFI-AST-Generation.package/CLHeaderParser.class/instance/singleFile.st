@@ -1,0 +1,3 @@
+api
+singleFile
+	singleFile := true.

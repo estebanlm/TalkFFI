@@ -1,0 +1,3 @@
+visiting
+visitCLFunctionSignature: aNode
+	^true

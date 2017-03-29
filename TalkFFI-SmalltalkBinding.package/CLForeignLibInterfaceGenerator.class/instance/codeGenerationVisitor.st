@@ -1,0 +1,3 @@
+accessing
+codeGenerationVisitor
+	^ self subclassResponsibility 

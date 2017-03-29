@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "CLNodeTraversal",
+	"category" : "TalkFFI-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"defaultName",
+		"prefix",
+		"uniqueIdx"
+	],
+	"name" : "CLNameGeneration",
+	"type" : "normal"
+}

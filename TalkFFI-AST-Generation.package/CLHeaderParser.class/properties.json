@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "CiprianTeodorov 12/8/2012 21:13",
+	"super" : "Object",
+	"category" : "TalkFFI-AST-Generation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"headerFile",
+		"compilationOptions",
+		"singleFile",
+		"functions",
+		"types",
+		"unmappable",
+		"builder",
+		"tu",
+		"functionFilterBlock",
+		"functionFilter"
+	],
+	"name" : "CLHeaderParser",
+	"type" : "normal"
+}

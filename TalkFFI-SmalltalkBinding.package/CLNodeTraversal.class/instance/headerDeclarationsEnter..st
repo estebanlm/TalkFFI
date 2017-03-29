@@ -1,0 +1,2 @@
+actions
+headerDeclarationsEnter: aNode

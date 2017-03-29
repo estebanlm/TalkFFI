@@ -1,0 +1,3 @@
+accessing
+pointee
+	^ pointee

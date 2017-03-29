@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "TalkFFI-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"libraryName",
+		"mapping",
+		"model",
+		"typemap",
+		"uniqueIdx",
+		"category",
+		"generatedClasses",
+		"ffiSelectorBlock",
+		"classPrefix",
+		"isIgnoringUnsupported",
+		"libraryPath",
+		"functionFilter"
+	],
+	"name" : "CLMappingModel",
+	"type" : "normal"
+}

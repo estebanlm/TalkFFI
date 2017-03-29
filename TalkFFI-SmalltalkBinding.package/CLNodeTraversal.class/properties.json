@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "CLNodeVisitor",
+	"category" : "TalkFFI-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"visited",
+		"context",
+		"preventRevisit",
+		"doTypes",
+		"doFunctions"
+	],
+	"name" : "CLNodeTraversal",
+	"type" : "normal"
+}

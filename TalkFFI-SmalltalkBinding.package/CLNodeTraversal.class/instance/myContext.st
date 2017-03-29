@@ -1,0 +1,3 @@
+accessing
+myContext
+	^ context last

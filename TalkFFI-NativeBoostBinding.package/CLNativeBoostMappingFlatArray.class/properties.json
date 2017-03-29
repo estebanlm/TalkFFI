@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CLNativeBoostMapping",
+	"category" : "TalkFFI-NativeBoostBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CLNativeBoostMappingFlatArray",
+	"type" : "normal"
+}
