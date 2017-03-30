@@ -1,3 +1,3 @@
 accessing
 rbModel
-	^self mappingModel model 
+	^ self mappingModel model 

@@ -1,3 +1,3 @@
 accessing mapping
 unionSuperclass 
-	^#FFIExternalUnion
+	^ #FFIExternalUnion

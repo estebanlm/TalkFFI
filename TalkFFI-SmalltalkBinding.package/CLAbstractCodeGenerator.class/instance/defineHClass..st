@@ -1,3 +1,6 @@
 compiling classes
 defineHClass: aName
-	self defineClass: aName superclass: self headerSuperclass in: self mappingModel bindingCategory.
+	self 
+		defineClass: aName 
+		superclass: self headerSuperclass 
+		in: self mappingModel bindingCategory

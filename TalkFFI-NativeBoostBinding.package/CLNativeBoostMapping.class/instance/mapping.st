@@ -1,3 +1,3 @@
 accessing
 mapping
-	^self mappingModel  mapping
+	^ self mappingModel mapping

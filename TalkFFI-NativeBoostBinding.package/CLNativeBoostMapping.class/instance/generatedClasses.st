@@ -1,3 +1,3 @@
 accessing
 generatedClasses
-	^self mappingModel generatedClasses
+	^ self mappingModel generatedClasses

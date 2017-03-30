@@ -1,3 +1,3 @@
 accessing
 typemap
-	^self mappingModel typemap
+	^ self mappingModel typemap

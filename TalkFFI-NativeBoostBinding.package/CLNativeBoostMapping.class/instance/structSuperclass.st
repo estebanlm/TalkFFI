@@ -1,3 +1,3 @@
 accessing mapping
 structSuperclass 
-	^#FFIExternalStructure
+	^ #FFIExternalStructure

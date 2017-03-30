@@ -1,3 +1,0 @@
-accessing
-platformIdGetter
-	^'NativeBoost platformId'

@@ -1,3 +1,3 @@
 accessing
 ffiSelectorBlock
-	^self  mappingModel ffiSelectorBlock
+	^ self mappingModel ffiSelectorBlock

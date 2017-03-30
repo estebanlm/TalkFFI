@@ -1,3 +1,0 @@
-meta data
-ruleInconsistentMethodClassificationRuleV1TruePositive
-^ #(#(#(#RGMethodDefinition #(#'CLLibraryMap class' #at: #true)) #'2013-02-02T20:50:25.692000001+01:00') #(#(#RGMethodDefinition #(#'CLLibraryMap class' #initialize #true)) #'2013-02-02T20:50:25.731+01:00') #(#(#RGMethodDefinition #(#'CLExternalLibraryWrapper class' #initialize #true)) #'2013-02-02T20:52:11.08+01:00') #(#(#RGMethodDefinition #(#CLExternalLibraryWrapper #libraryNameOrHandle #false)) #'2013-02-02T20:52:11.117000001+01:00') #(#(#RGMethodDefinition #(#'CLExternalLibraryWrapper class' #new #true)) #'2013-02-02T20:52:11.157+01:00') )

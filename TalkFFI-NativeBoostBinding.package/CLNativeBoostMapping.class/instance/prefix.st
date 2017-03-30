@@ -1,3 +1,3 @@
 accessing
 prefix
-	^self mappingModel classPrefix 
+	^ self mappingModel classPrefix 

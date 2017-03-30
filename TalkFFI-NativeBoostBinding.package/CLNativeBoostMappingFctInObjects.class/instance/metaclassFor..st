@@ -8,4 +8,4 @@ metaclassFor: aTypeName
 		ifTrue: [ class := nil ].
 	^ class 
 		ifNotNil: [ self metaclassNamed: class asSymbol ]
-		ifNil: [ self metaclassNamed:  aTypeName asSymbol ] 
+		ifNil: [ self metaclassNamed:  aTypeName asSymbol ]

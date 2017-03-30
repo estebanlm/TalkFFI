@@ -1,3 +1,0 @@
-accessing
-libraryNameOrHandle
-	^self subclassResponsibility 
