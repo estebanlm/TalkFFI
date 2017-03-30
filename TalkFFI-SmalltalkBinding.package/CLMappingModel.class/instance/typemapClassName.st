@@ -1,3 +1,3 @@
 accessing
 typemapClassName
-	^ (self libraryName , 'Map') asSymbol
+	^ (self libraryName , 'Library') asSymbol
