@@ -1,3 +1,3 @@
 accessing mapping
 headerSuperclass 
-	^ #Object
+	^ #CLHeader
