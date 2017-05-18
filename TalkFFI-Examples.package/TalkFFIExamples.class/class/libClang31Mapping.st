@@ -7,7 +7,7 @@ libClang31Mapping
 		fileName: (path / 'include/clang-c/Index.h') fullName;
 		addOption: '-I' , (path / 'include/clang/include') fullName.
 	builder := (CLForeign2NBGenerator for: #LibClangTest)
-		platform: NativeBoostConstants mac32PlatformId libPath: (path / 'lib/libclang.dylib') fullName;
+		platform: Smalltalk os libPath: (path / 'lib/libclang.dylib') fullName;
 		addHeader: indexH;
 		classPrefix: 'CLang';
 		ffiSelectorBlock: [ :selector | 
