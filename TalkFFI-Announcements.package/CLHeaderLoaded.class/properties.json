@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Announcement",
+	"category" : "TalkFFI-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"header",
+		"diagnosticSet"
+	],
+	"name" : "CLHeaderLoaded",
+	"type" : "normal"
+}
