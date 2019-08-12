@@ -1,3 +1,0 @@
-api
-singleFile
-	singleFile := true.

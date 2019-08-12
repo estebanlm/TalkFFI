@@ -1,3 +1,0 @@
-accessing-libclang
-indexClass
-	^ CLIndex 

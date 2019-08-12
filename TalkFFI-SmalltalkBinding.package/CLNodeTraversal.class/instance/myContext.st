@@ -1,3 +1,0 @@
-accessing
-myContext
-	^ context last

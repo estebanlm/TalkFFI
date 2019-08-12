@@ -1,3 +1,0 @@
-api
-parseHeader
-	^ self convertHeader

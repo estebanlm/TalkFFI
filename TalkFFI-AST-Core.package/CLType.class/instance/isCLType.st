@@ -1,3 +1,0 @@
-testing
-isCLType
-	^true

@@ -1,3 +1,0 @@
-testing
-isCLField
-	^false

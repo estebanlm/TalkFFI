@@ -1,3 +1,0 @@
-accessing-libclang
-cursorVisitorClass
-	^ CXCursorVisitorCb 

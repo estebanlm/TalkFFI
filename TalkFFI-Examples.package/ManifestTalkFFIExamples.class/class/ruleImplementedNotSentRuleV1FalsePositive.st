@@ -1,3 +1,0 @@
-meta data
-ruleImplementedNotSentRuleV1FalsePositive
-^ #(#(#(#RGMethodDefinition #(#'TalkFFIExamples class' #cairoMapping #true)) #'2013-02-02T20:57:14.795000001+01:00') #(#(#RGMethodDefinition #(#'TalkFFIExamples class' #llvmc31Mapping #true)) #'2013-02-02T20:57:17.031+01:00') #(#(#RGMethodDefinition #(#'TalkFFIExamples class' #libClang31Mapping #true)) #'2013-02-02T20:57:20.789+01:00') #(#(#RGMethodDefinition #(#'TalkFFIExamples class' #vecLibMapping #true)) #'2013-02-02T20:57:23.001+01:00') )

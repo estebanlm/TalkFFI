@@ -1,3 +1,0 @@
-accessing
-fnSpec 
-	self subclassResponsibility

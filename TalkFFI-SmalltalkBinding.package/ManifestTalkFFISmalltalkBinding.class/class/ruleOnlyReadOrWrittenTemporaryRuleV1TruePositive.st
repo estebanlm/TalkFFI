@@ -1,3 +1,0 @@
-meta data
-ruleOnlyReadOrWrittenTemporaryRuleV1TruePositive
-^ #(#(#(#RGMethodDefinition #(#CLAbstractCodeGenerator #selectorString: #false)) #'2013-02-02T20:18:21.133+01:00') #(#(#RGMethodDefinition #(#CLAbstractCodeGenerator #enumSpecString: #false)) #'2013-02-02T20:18:27.048+01:00') #(#(#RGMethodDefinition #(#CLAbstractCodeGenerator #compileFnCall:signature:in: #false)) #'2013-02-02T20:18:37.902+01:00') #(#(#RGMethodDefinition #(#CLForeignLibInterfaceGenerator #generate #false)) #'2013-02-02T20:18:49.984+01:00') #(#(#RGMethodDefinition #(#CLOpaquePointerReduction #primaryExit: #false)) #'2013-02-02T20:19:01.998+01:00') )

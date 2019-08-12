@@ -1,0 +1,20 @@
+Class {
+	#name : #ManifestTalkFFITests,
+	#superclass : #Object,
+	#category : 'TalkFFI-Tests'
+}
+
+{ #category : #'meta data' }
+ManifestTalkFFITests class >> rejectClasses [
+^ #()
+]
+
+{ #category : #'meta data' }
+ManifestTalkFFITests class >> rejectRules [
+^ #()
+]
+
+{ #category : #'meta data' }
+ManifestTalkFFITests class >> ruleOnlyReadOrWrittenTemporaryRuleV1TruePositive [
+^ #(#(#(#RGMethodDefinition #(#CLOpaquePtrReductionTest #testTVoidPtrReturn #false)) #'2013-02-02T20:18:07.988+01:00') #(#(#RGMethodDefinition #(#CLOpaquePtrReductionTest #testTVoidPtrReturn1 #false)) #'2013-02-02T20:18:12.414+01:00') #(#(#RGMethodDefinition #(#CLOpaquePtrReductionTest #testTVoidReturnPtr #false)) #'2013-02-02T20:18:15.997+01:00') )
+]

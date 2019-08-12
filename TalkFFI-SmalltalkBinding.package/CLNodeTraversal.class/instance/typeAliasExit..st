@@ -1,2 +1,0 @@
-actions
-typeAliasExit: aNode
