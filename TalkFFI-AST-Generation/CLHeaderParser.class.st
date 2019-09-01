@@ -27,7 +27,7 @@ Class {
 		'functionFilterBlock',
 		'functionFilter'
 	],
-	#category : 'TalkFFI-AST-Generation'
+	#category : #'TalkFFI-AST-Generation'
 }
 
 { #category : #'instance creation' }
@@ -134,7 +134,11 @@ CLHeaderParser >> cursorVisitorClass [
 CLHeaderParser >> defaultFilterBlock [
 	^ [ :file :cursor | 
 	singleFile
-		ifTrue: [ cursor location presumedLocation first = file ]
+		ifTrue: [ 
+			| location |
+			location := cursor location.
+			location isNull ifTrue: [ ^ false ].
+			location presumedLocation first = file ]
 		ifFalse: [ true ] ]
 ]
 

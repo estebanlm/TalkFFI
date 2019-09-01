@@ -1,7 +1,7 @@
 Class {
 	#name : #CLOpaquePtrReductionTest,
 	#superclass : #TestCase,
-	#category : 'TalkFFI-Tests'
+	#category : #'TalkFFI-Tests'
 }
 
 { #category : #helpers }
@@ -15,6 +15,7 @@ CLOpaquePtrReductionTest >> convertSource: aString [
 		headerFile: 't.c';
 		parseHeader.
 	ast accept: CLOpaquePointerReduction  new.
+	self halt. 
 	^ ast
 ]
 

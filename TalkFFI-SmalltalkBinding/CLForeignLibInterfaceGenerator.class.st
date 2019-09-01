@@ -42,7 +42,7 @@ Class {
 		'includeDir',
 		'libraryPaths'
 	],
-	#category : 'TalkFFI-SmalltalkBinding'
+	#category : #'TalkFFI-SmalltalkBinding'
 }
 
 { #category : #'instance creation' }
@@ -293,16 +293,15 @@ CLForeignLibInterfaceGenerator >> model [
 
 { #category : #'string generation' }
 CLForeignLibInterfaceGenerator >> moduleNameStringFor: platform path: path [
-	^'<1s>ModuleName<n><t> ^ <2p>.' 
-		expandMacrosWith: (self platformPrefix: platform)   
+	^ '<1s>ModuleName<n><t> ^ <2p>.'
+		expandMacrosWith: (self platformPrefix: platform)
 		with: path
 ]
 
 { #category : #'generating ffi binding' }
 CLForeignLibInterfaceGenerator >> openChanges [ 
 	"mappingModel model changes open."
-	(ChangesBrowser new changes: {mappingModel model changes}) open"openWithSpec"
-
+	(ChangesBrowser new changes: {mappingModel model changes}) open 
 ]
 
 { #category : #accessing }
@@ -315,6 +314,7 @@ CLForeignLibInterfaceGenerator >> platformPrefix: platform [
 	self flag: #todo. "This will change for 64bits"
 	platform isMacOS ifTrue: [ ^ 'mac' ].
 	platform isUnix32 ifTrue: [ ^ 'unix' ].
+	platform isUnix64 ifTrue: [ ^ 'unix64' ].
 	platform isWin32 ifTrue: [ ^ 'win32' ].
 	
 	self error: ('Undefined platform: {1}' format: { platform asString })

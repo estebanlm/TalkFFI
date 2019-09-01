@@ -1,7 +1,7 @@
 Class {
 	#name : #TalkFFIExamples,
 	#superclass : #Object,
-	#category : 'TalkFFI-Examples'
+	#category : #'TalkFFI-Examples'
 }
 
 { #category : #'example-abc' }
@@ -35,6 +35,28 @@ TalkFFIExamples class >> abcMapping [
 { #category : #'example-abc' }
 TalkFFIExamples class >> abcPath [
 	^FileReference / 'Users/ciprian/Playfield/repositories/abc'
+]
+
+{ #category : #'example-cairo' }
+TalkFFIExamples class >> aioMapping [
+	<example>
+	| path includeDir options builder hFiles |
+	self logClangErrorsInTranscript.
+
+	path := FileReference / #usr / #include.
+	includeDir := path.
+	options := {('-I' , path fullName)}.
+	hFiles := {'aio.h'}.
+	builder := (CLForeign2NBGenerator for: #LibRT)
+		platform: OSPlatform current libPath: '/lib/x86_64-linux-gnu/librt-2.23.so';
+		compilationOptions: options;
+		includeDir: includeDir;
+		addHeaderFiles: hFiles;
+		classPrefix: 'Aio';
+		ignoreUnsupported;
+		generate;
+		openChanges.
+	^ builder
 ]
 
 { #category : #'example-buddy' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #BaselineOfTalkFFI,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfTalkFFI'
+	#category : #BaselineOfTalkFFI
 }
 
 { #category : #baselines }
@@ -18,8 +18,7 @@ BaselineOfTalkFFI >> baseline: spec [
 			package: 'TalkFFI-Announcements';
 			package: 'TalkFFI-AST-Core';
 			package: 'TalkFFI-AST-Generation' with: [
-				spec requires: #('LibClang' 'TalkFFI-AST-Core' );
-				postLoadDoIt: #postloadForASTGeneration ];
+				spec requires: #('LibClang' 'TalkFFI-AST-Core' ) ];
 			package: 'TalkFFI-SmalltalkBinding' with: [
 				spec requires: #('TalkFFI-AST-Core' ). ];
 			package: 'TalkFFI-NativeBoostBinding' with: [
