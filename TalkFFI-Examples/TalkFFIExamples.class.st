@@ -43,16 +43,16 @@ TalkFFIExamples class >> aioMapping [
 	| path includeDir options builder hFiles |
 	self logClangErrorsInTranscript.
 
-	path := FileReference / #usr / #include.
+	path := FileReference / #usr / #include  .
 	includeDir := path.
 	options := {('-I' , path fullName)}.
-	hFiles := {'aio.h'}.
+	hFiles := {'signal.h'}.
 	builder := (CLForeign2NBGenerator for: #LibRT)
-		platform: OSPlatform current libPath: '/lib/x86_64-linux-gnu/librt-2.23.so';
+		platform: OSPlatform current libPath: '/usr/lib/libc.dylib';
 		compilationOptions: options;
 		includeDir: includeDir;
 		addHeaderFiles: hFiles;
-		classPrefix: 'Aio';
+		classPrefix: 'RT';
 		ignoreUnsupported;
 		generate;
 		openChanges.
