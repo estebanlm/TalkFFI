@@ -13,15 +13,20 @@ TalkFFIExamples class >> abcHeaders [
 
 { #category : #'example-abc' }
 TalkFFIExamples class >> abcMapping [
+	<example>
 	| path includeDir options builder hFiles |
 	self logClangErrorsInTranscript.
 	path := self abcPath.
 	includeDir := path / 'src'.
-	options := {('-I' , includeDir fullName). 
-		'-DLIN'. '-DSIZEOF_VOID_P=4'. '-DSIZEOF_LONG=4'. '-DSIZEOF_INT=4'}.
+	options := {('-I' , includeDir fullName).
+	'-DLIN'.
+	'-DSIZEOF_VOID_P=4'.
+	'-DSIZEOF_LONG=4'.
+	'-DSIZEOF_INT=4'}.
 	hFiles := self abcHeaders.
 	builder := (CLForeign2NBGenerator for: #ABCSynthesis)
-		platform: OSPlatform current libPath: (path / 'libabc.dylib') fullName;
+		platform: OSPlatform current
+			libPath: (path / 'libabc.dylib') fullName;
 		compilationOptions: options;
 		includeDir: includeDir;
 		addHeaderFiles: hFiles;
@@ -29,7 +34,7 @@ TalkFFIExamples class >> abcMapping [
 		ignoreUnsupported;
 		generate;
 		openChanges.
-	^builder 
+	^ builder
 ]
 
 { #category : #'example-abc' }
@@ -37,7 +42,7 @@ TalkFFIExamples class >> abcPath [
 	^FileReference / 'Users/ciprian/Playfield/repositories/abc'
 ]
 
-{ #category : #'example-cairo' }
+{ #category : #'example-aio' }
 TalkFFIExamples class >> aioMapping [
 	<example>
 	| path includeDir options builder hFiles |
@@ -70,6 +75,7 @@ TalkFFIExamples class >> buddyHeaders [
 
 { #category : #'example-buddy' }
 TalkFFIExamples class >> buddyMapping [
+	<example>
 	| path includeDir options builder hFiles |
 	self logClangErrorsInTranscript.
 	path := self buddyPath.
@@ -77,7 +83,8 @@ TalkFFIExamples class >> buddyMapping [
 	options := {('-I' , includeDir fullName)}.
 	hFiles := self buddyHeaders.
 	builder := (CLForeign2NBGenerator for: #Buddy)
-		platform: Smalltalk os libPath: (path / 'lib/libbdd.dylib') fullName;
+		platform: OSPlatform current
+			libPath: (path / 'lib/libbdd.dylib') fullName;
 		compilationOptions: options;
 		includeDir: includeDir;
 		addHeaderFiles: hFiles;
@@ -86,7 +93,7 @@ TalkFFIExamples class >> buddyMapping [
 		ffiSelectorBlock: self buddySelectorTrimmer;
 		generate;
 		openChanges.
-	^builder 
+	^ builder
 ]
 
 { #category : #'example-buddy' }
@@ -132,6 +139,7 @@ TalkFFIExamples class >> cairoHeaders [
 
 { #category : #'example-cairo' }
 TalkFFIExamples class >> cairoMapping [
+	<example>
 	| path includeDir options builder hFiles |
 	self logClangErrorsInTranscript.
 	path := self cairoPath.
@@ -139,7 +147,8 @@ TalkFFIExamples class >> cairoMapping [
 	options := {('-I' , (path / 'include/cairo') fullName)}.
 	hFiles := self cairoHeaders.
 	builder := (CLForeign2NBGenerator for: #LibCairo)
-		platform: NativeBoostConstants mac32PlatformId libPath: (path / 'lib/libcairo.dylib') fullName;
+		platform: OSPlatform current
+			libPath: (path / 'lib/libcairo.dylib') fullName;
 		compilationOptions: options;
 		includeDir: includeDir;
 		addHeaderFiles: hFiles;
@@ -147,7 +156,7 @@ TalkFFIExamples class >> cairoMapping [
 		ignoreUnsupported;
 		generate;
 		openChanges.
-	^builder
+	^ builder
 ]
 
 { #category : #'example-cairo' }
@@ -164,6 +173,7 @@ TalkFFIExamples class >> existsOrAsk: aPath for: aLibraryName [
 
 { #category : #'example-libclang' }
 TalkFFIExamples class >> libClang31Mapping [
+	<example>
 	| indexH builder path |
 	self logClangErrorsInTranscript.
 	path := self libClang31Path.
@@ -171,17 +181,18 @@ TalkFFIExamples class >> libClang31Mapping [
 		fileName: (path / 'include/clang-c/Index.h') fullName;
 		addOption: '-I' , (path / 'include/clang/include') fullName.
 	builder := (CLForeign2NBGenerator for: #LibClangTest)
-		platform: Smalltalk os libPath: (path / 'lib/libclang.dylib') fullName;
+		platform: OSPlatform current
+			libPath: (path / 'lib/libclang.dylib') fullName;
 		addHeader: indexH;
 		classPrefix: 'CLang';
 		ffiSelectorBlock: [ :selector | 
-					(selector beginsWith: 'clang_')
-						ifTrue: [ selector copyFrom: 7 to: selector size ]
-						ifFalse: [ selector ] ];
+			(selector beginsWith: 'clang_')
+				ifTrue: [ selector copyFrom: 7 to: selector size ]
+				ifFalse: [ selector ] ];
 		ignoreUnsupported;
 		generate;
 		openChanges.
-	^builder.
+	^ builder
 ]
 
 { #category : #'example-libclang' }
@@ -198,14 +209,18 @@ TalkFFIExamples class >> libarchfpgaHeaders [
 
 { #category : #'example-libarchfpga' }
 TalkFFIExamples class >> libarchfpgaMapping [
+	<example>
 	| path includeDir options builder hFiles |
 	self logClangErrorsInTranscript.
 	path := self libarchfpgaPath.
 	includeDir := path / 'include'.
-	options := {('-I' , includeDir fullName). ('-I', (path  / '../printhandler/SRC/TIO_InputOutputHandlers') fullName )}.
+	options := {('-I' , includeDir fullName).
+	('-I'
+		, (path / '../printhandler/SRC/TIO_InputOutputHandlers') fullName)}.
 	hFiles := self libarchfpgaHeaders.
 	builder := (CLForeign2NBGenerator for: #VTR)
-		platform: NativeBoostConstants mac32PlatformId libPath: (path / '../Build/Products/Debug/libarchfpga.dylib') fullName;
+		platform: OSPlatform current
+			libPath: (path / '../Build/Products/Debug/libarchfpga.dylib') fullName;
 		compilationOptions: options;
 		includeDir: includeDir;
 		addHeaderFiles: hFiles;
@@ -214,7 +229,7 @@ TalkFFIExamples class >> libarchfpgaMapping [
 		checkFunctionAvailability;
 		generate;
 		openChanges.
-	^builder 
+	^ builder
 ]
 
 { #category : #'example-libarchfpga' }
@@ -277,6 +292,7 @@ TalkFFIExamples class >> libgit2Headers [
 
 { #category : #'example-libgit2' }
 TalkFFIExamples class >> libgit2Mapping [
+	<example>
 	| path includeDir options builder hFiles |
 	self logClangErrorsInTranscript.
 	path := self libgit2Path.
@@ -284,15 +300,16 @@ TalkFFIExamples class >> libgit2Mapping [
 	options := {('-I' , includeDir fullName)}.
 	hFiles := self libgit2Headers.
 	builder := (CLForeign2NBGenerator for: #LibGit2)
-		platform: Smalltalk os libPath: (path / 'build/libgit2.dylib') fullName;
+		platform: OSPlatform current
+			libPath: (path / 'build/libgit2.dylib') fullName;
 		compilationOptions: options;
 		includeDir: includeDir;
 		addHeaderFiles: hFiles;
 		classPrefix: 'LG2';
 		ffiSelectorBlock: [ :selector | 
-					(selector beginsWith: 'git_')
-						ifTrue: [ (selector copyFrom: 5 to: selector size) uncapitalized ]
-						ifFalse: [ selector uncapitalized ] ];
+			(selector beginsWith: 'git_')
+				ifTrue: [ (selector copyFrom: 5 to: selector size) uncapitalized ]
+				ifFalse: [ selector uncapitalized ] ];
 		ignoreUnsupported;
 		generate;
 		openChanges.
@@ -340,6 +357,7 @@ TalkFFIExamples class >> llvmc31LTOHeaders [
 
 { #category : #'example-llvm-c' }
 TalkFFIExamples class >> llvmc31LTOMappingFctInObjects [
+	<example>
 	| path includeDir options builder hFiles |
 	path := self llvmc31Path.
 	includeDir := path / 'include/llvm-c'.
@@ -376,7 +394,7 @@ TalkFFIExamples class >> llvmc31Mapping [
 	'-D__STDC_LIMIT_MACROS'}.
 	hFiles := self llvmc31Headers.
 	builder := (CLForeign2NBGenerator for: #LLVM)
-		platform: Smalltalk os libPath: (path / 'lib/libLLVM-3.1.dylib') fullName;
+		platform: OSPlatform current libPath: (path / 'lib/libLLVM-3.1.dylib') fullName;
 		compilationOptions: options;
 		includeDir: includeDir;
 		addHeaderFiles: hFiles;
@@ -393,6 +411,7 @@ TalkFFIExamples class >> llvmc31Mapping [
 
 { #category : #'example-llvm-c' }
 TalkFFIExamples class >> llvmc31MappingFctInObjects [
+	<example>
 	| path includeDir options builder hFiles |
 	path := self llvmc31Path.
 	includeDir := path / 'include/llvm-c'.
@@ -402,7 +421,7 @@ TalkFFIExamples class >> llvmc31MappingFctInObjects [
 	hFiles := self llvmc31Headers.
 	builder := (CLForeign2NBGenerator for: #LLVM)
 		codeGenerationVisitor: CLNativeBoostMappingFctInObjects;
-		platform: Smalltalk os libPath: (path / 'lib' / 'libLLVM.dylib') fullName;
+		platform: OSPlatform current libPath: (path / 'lib' / 'libLLVM.dylib') fullName;
 		compilationOptions: options;
 		includeDir: includeDir;
 		addHeaderFiles: hFiles;
@@ -460,6 +479,7 @@ TalkFFIExamples class >> vecLibHeaders [
 
 { #category : #'example-vecLib' }
 TalkFFIExamples class >> vecLibMapping [
+	<example>
 	| path includeDir options builder hFiles |
 	self logClangErrorsInTranscript.
 	path := self vecLibPath.
@@ -467,7 +487,8 @@ TalkFFIExamples class >> vecLibMapping [
 	options := {('-I' , (path / 'Headers') fullName)}.
 	hFiles := self vecLibHeaders.
 	builder := (CLForeign2NBGenerator for: #VecLib)
-		platform: NativeBoostConstants mac32PlatformId libPath: (path / 'vecLib.dylib') fullName;
+		platform: OSPlatform current
+			libPath: (path / 'vecLib.dylib') fullName;
 		compilationOptions: options;
 		includeDir: includeDir;
 		addHeaderFiles: hFiles;
@@ -475,7 +496,7 @@ TalkFFIExamples class >> vecLibMapping [
 		ignoreUnsupported;
 		generate;
 		openChanges.
-	^builder 
+	^ builder
 ]
 
 { #category : #'example-vecLib' }
