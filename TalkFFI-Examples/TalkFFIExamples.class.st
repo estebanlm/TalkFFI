@@ -42,28 +42,6 @@ TalkFFIExamples class >> abcPath [
 	^FileReference / 'Users/ciprian/Playfield/repositories/abc'
 ]
 
-{ #category : #'example-aio' }
-TalkFFIExamples class >> aioMapping [
-	<example>
-	| path includeDir options builder hFiles |
-	self logClangErrorsInTranscript.
-
-	path := FileReference / #usr / #include  .
-	includeDir := path.
-	options := {('-I' , path fullName)}.
-	hFiles := {'signal.h'}.
-	builder := (CLForeign2NBGenerator for: #LibRT)
-		platform: OSPlatform current libPath: '/usr/lib/libc.dylib';
-		compilationOptions: options;
-		includeDir: includeDir;
-		addHeaderFiles: hFiles;
-		classPrefix: 'RT';
-		ignoreUnsupported;
-		generate;
-		openChanges.
-	^ builder
-]
-
 { #category : #'example-buddy' }
 TalkFFIExamples class >> buddyHeaders [
 	^{
@@ -169,6 +147,39 @@ TalkFFIExamples class >> existsOrAsk: aPath for: aLibraryName [
 	aPath exists
 		ifFalse: [ ^ UIManager default chooseDirectory: 'Choose ', aLibraryName, ' directory:' ].
 	^ aPath
+]
+
+{ #category : #'example-aio' }
+TalkFFIExamples class >> libCHeaders [
+	^ {'assert.h' . 'math.h' . 'stdlib.h' . 'complex.h' . 'setjmp.h'.
+	'stdnoreturn.h' . 'ctype.h' . 'signal.h' . 'string.h' . 'errno.h'.
+	'stdalign.h' . 'tgmath.h' . 'fenv.h' . 'stdarg.h' . 'threads.h'.
+	'float.h' . 'stdatomic.h' . 'time.h' . 'inttypes.h' . 'stdbool.h'.
+	'uchar.h' . 'iso646.h' . 'stddef.h' . 'wchar.h' . 'limits.h' . 'stdint.h'.
+	'wctype.h' . 'locale.h' . 'stdio.h' . 'signal.h' . 'sys/signal.h'.
+	'aio.h' . 'sys/aio.h' . 'malloc/malloc.h' . 'malloc/_malloc.h'}
+]
+
+{ #category : #'example-aio' }
+TalkFFIExamples class >> libCMapping [
+	<example>
+	| path includeDir options builder hFiles |
+	self logClangErrorsInTranscript.
+
+	path := FileReference / #usr / #include  .
+	includeDir := path.
+	options := {('-I' , path fullName)}.
+	hFiles := self libCHeaders .
+	builder := (CLForeign2NBGenerator for: #TalkFFILibC)
+		platform: OSPlatform current libPath: '/usr/lib/libc.dylib';
+		compilationOptions: options;
+		includeDir: includeDir;
+		addHeaderFiles: hFiles;
+		classPrefix: 'RT';
+		ignoreUnsupported;
+		generate;
+		openChanges.
+	^ builder
 ]
 
 { #category : #'example-libclang' }
