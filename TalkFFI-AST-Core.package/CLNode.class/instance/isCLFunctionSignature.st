@@ -1,3 +1,0 @@
-testing
-isCLFunctionSignature
-	^false

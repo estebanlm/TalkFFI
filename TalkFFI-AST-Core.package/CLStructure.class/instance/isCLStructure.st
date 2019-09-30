@@ -1,3 +1,0 @@
-testing
-isCLStructure
-	^true

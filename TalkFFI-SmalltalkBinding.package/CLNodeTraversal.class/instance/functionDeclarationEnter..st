@@ -1,2 +1,0 @@
-actions
-functionDeclarationEnter: aNode

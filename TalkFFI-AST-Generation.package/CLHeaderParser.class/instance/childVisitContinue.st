@@ -1,3 +1,0 @@
-accessing-libclang
-childVisitContinue
-	^ CXChildVisitResultEnum CXChildVisit_Continue

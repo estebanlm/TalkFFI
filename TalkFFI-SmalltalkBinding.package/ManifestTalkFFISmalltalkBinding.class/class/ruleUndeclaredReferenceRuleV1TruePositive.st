@@ -1,3 +1,0 @@
-meta data
-ruleUndeclaredReferenceRuleV1TruePositive
-^ #(#(#(#RGMethodDefinition #(#CLForeignLibInterfaceGenerator #platform:libPath: #false)) #'2013-02-02T20:43:38.926000011+01:00') #(#(#RGMethodDefinition #(#CLForeignLibInterfaceGenerator #initialize #false)) #'2013-02-02T20:43:38.976000001+01:00') #(#(#RGMethodDefinition #(#CLForeignLibInterfaceGenerator #libraryHandleMethodString #false)) #'2013-02-02T20:43:39.023000001+01:00') )

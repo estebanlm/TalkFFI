@@ -1,3 +1,0 @@
-visiting
-visitCLEnumeration: aNode
-	^false

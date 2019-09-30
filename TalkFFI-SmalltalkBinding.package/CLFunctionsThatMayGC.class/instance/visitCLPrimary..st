@@ -1,3 +1,0 @@
-visiting
-visitCLPrimary: aNode
-	^ false

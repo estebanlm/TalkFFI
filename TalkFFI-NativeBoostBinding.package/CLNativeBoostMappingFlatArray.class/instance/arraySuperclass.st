@@ -1,3 +1,0 @@
-accessing mapping
-arraySuperclass 
-	^ #FFIExternalStructure

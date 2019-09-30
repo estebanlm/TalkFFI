@@ -1,3 +1,0 @@
-visiting
-visitCLStructure: aNode
-	^false

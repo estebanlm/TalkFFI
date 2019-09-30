@@ -1,3 +1,0 @@
-testing
-isCLUnion
-	^false
